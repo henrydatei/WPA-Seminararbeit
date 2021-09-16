@@ -32,10 +32,10 @@
  ]
 
 % scrartcl von Komascript
-\LoadClass[toc=listof, toc=idx, toc=bib, abstract=true, numbers=noenddot]{scrartcl}
+\LoadClass[toc=listof, toc=idx, toc=bib, abstract=true, numbers=noenddot,12pt]{scrartcl}
 
 % Sprache, inputenc für Umlaute
-\RequirePackage[english,ngerman]{babel}
+\RequirePackage[ngerman]{babel}
 \RequirePackage[utf8]{inputenc}
 
 %****************************
@@ -234,13 +234,13 @@
         \renewcommand{\arraystretch}{1.05}
     \else
         \setstretch{1,3}
-        \renewcommand{\arraystretch}{1.3}
+        \renewcommand{\arraystretch}{1.5}
     \fi
 
 % Links und Verweise mit \href
 \AtEndOfPackage{
     \if@colorlinks
-        \RequirePackage[colorlinks=true,breaklinks]{hyperref}
+        \RequirePackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,breaklinks]{hyperref}
     \else
         \RequirePackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,breaklinks]{hyperref}
     \fi

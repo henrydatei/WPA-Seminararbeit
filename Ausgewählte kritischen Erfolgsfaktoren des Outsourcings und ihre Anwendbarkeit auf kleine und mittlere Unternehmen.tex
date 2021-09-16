@@ -1,0 +1,238 @@
+\documentclass[seminar,colorlinks]{isih}
+
+% verpflichtende Parameter:
+%   "foseminar" / "beleg" / "bachelor" / "master" / "diplom" : Art der Abschlussarbeit
+%   "seminar" wird ebenfalls unterstützt, es müssen dann allerdings alle Teilnehmer mit Namen und Matr.-Nummer je Komma-separiert in den "author"-Parameter geschrieben werden
+% 
+% optionale Parameter:
+%   "colorlinks"    : farbige (statt schwarze) Links im Dokument
+%   "singlespace"   : einfacher (statt größerer) Zeilenabstand
+%   "indent"        : eingerückte Zeile bei neuem Absatz hinzufügen
+%   "nopar"         : Leerzeile nach Absatz entfernen
+%   "compmodern"    : Schriftart 'Computer Modern' statt 'Times New Roman'
+
+%---------------------------------------------------------------------
+% Platz für weitere Pakete
+% \usepackage{...}
+\usepackage[nameinlink]{cleveref}
+\crefname{figure}{Abb.}{Abb.}
+%---------------------------------------------------------------------
+
+\begin{document}
+
+%---------------------------------------------------------------------
+% Settings
+\title{Ausgewählte kritischen Erfolgsfaktoren des Outsourcings und ihre Anwendbarkeit auf kleine und mittlere Unternehmen} % Titel der Arbeit
+\author{Haustein, Henry; Hettmann, Sebastian}                      % Name des Bearbeiters
+\address{Königsteinstraße 8, 01277 Dresden; ...}    % Adresse des Bearbeiters
+\matr{4685025, ...}                     % Matrikelnummer
+\startdate{28.11.2020}              % Start-Datum der Arbeit
+\submitdate{01.03.2021}             % Abgabe-Datum der Arbeit
+\supervisor{Strahringer, Susanne}          % Namen aller Betreuer
+\semester{WS 2020/21}               % aktuelles Semester
+%---------------------------------------------------------------------
+
+\isihtitlepage
+\begin{preface}
+
+% Abstract / Zusammenfassung
+%\begin{abstract}
+%    Dieses Dokument ist als Template für Abschlussarbeiten am ISIH-Lehrstuhl gedacht. Es beinhaltet alle notwendigen Informationen und Styles, wie sie üblicherweise angewandt werden. Allerdings sind die Vorgaben nicht bindend, d.h., sollten mit dem Betreuer abgesprochen werden.
+%\end{abstract}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+%\lstlistoflistings\addcontentsline{toc}{section}{Quellcodeverzeichnis}  % entfernen, falls nicht benötigt
+%\listofusedequations\addcontentsline{toc}{section}{Formelverzeichnis}   % entfernen, falls nicht benötigt
+
+% Abkürzungsverzeichnis
+%\listofabbreviations
+%    \abbrev{TUD}{Technische Universität Dresden}
+%    \abbrev{...}{...}
+
+\end{preface}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Beginn des Hauptteils
+
+% Es bietet sich an, Kapitel in separate .tex-Dateien zu schreiben
+% und diese dann per "\input" oder "\include" einzubinden, anstatt 
+% alles in diese Haupt-Datei direkt rein zu schreiben. Gleiches 
+% gilt für die Anhänge. 
+% Aus technischen Gründen sind Kapitel als "\section" zu setzen.
+
+\section{Einleitung}
+\input{./Tex_files/Einleitung}
+
+\section{Theoretisches Framework}
+\input{./Tex_files/Theoretisches_Framework}
+
+\section{Methoden}
+
+\section{Ergebnisse}
+
+
+
+%\section{Grundlagen und Aufbau}
+%\label{kap:einfuehrung}
+%
+%\subsection{Dokument-Parameter}
+%    Als Grundlage der Arbeit muss einer der folgenden Parameter als Art der Arbeit gewählt werden: \textbf{foseminar}, \textbf{beleg}, \textbf{bachelor}, \textbf{master}, \textbf{diplom}. Der entsprechende Parameter ist am Anfang des Quellcodes (der \verb|.tex|-Datei) per \verb|\documentclass[...]{isih}| in den eckigen Kammern einzutragen. Weitere Parameter sind am Anfang des Quellcodes dieser Datei zu finden. Die Parameter der Arbeit umfassen persönliche Daten und Daten zu der Arbeit an sich. Diese sind ebenfalls am Anfang des Quellcodes in der (der \verb|.tex|-Datei) einzutragen. 
+%    
+%\subsection{Pre: Abstract, Auflistungen und Abkürzungsverzeichnis}
+%    Ein \textbf{Abstract}, als Zusammenfassung der Arbeit, gehört an den Anfang. Hier sollte in einigen Sätzen der Kontext, das Problem, die Ziele, die Lösung und die Evaluierung erläutert werden. Dabei sind 250--350~Wörter üblich.
+%    
+%    Das \textbf{Inhaltsverzeichnis}, \textbf{Abbildungsverzeichnis}, \textbf{Tabellenverzeichnis}, \textbf{Quellcodeverzeichnis} und \textbf{Formelverzeichnis} werden automatisch aus dem Inhalt vom Haupt-Text generiert.
+%
+%    Ein \textbf{Abkürzungsverzeichnis} folgt direkt nach den anderen Auflistungen. Es muss manuell und konsistent gepflegt werden. Die Abkürzungen sind in alphabetischer Reihenfolge angegeben. Die erste Nennung im Haupt-Text ist (am besten kursiv) auszuschreiben und die Abkürzung in Klammern dahinter zu nennen, zB. \textit{Technische Universität Dresden} (TUD).
+%
+%
+%\subsection{Post: Anhänge und Erklärung}
+%    \textbf{Anhänge} sollten Dinge enthalten, die nicht notwendigerweise im Haupt-Text stehen müssen (Interviews, viele und große Grafiken, lange Tabellen, etc.) Dazu werden normale Kapitel mit \verb|\section{}| und \verb|\subsection{}| am Ende der Datei angelegt (nach dem \verb|\appendix| Keyword; siehe Anhang~\ref{anh:links}). Die Formatierung der Kapitel wird automatisch übernommen.
+%    
+%    Die \textbf{Ehrenwörtliche Erklärung} steht am Schluss und muss am Ende unterzeichnet eingereicht werden. Bei der Abgabe muss sowohl das PDF als auch der \LaTeX-Quellcode eingereicht werden. 
+%
+%\subsection{Änderungen am Template}
+%    Das Template ist mit den Designregeln des ISIH-Lehrstuhls abgestimmt. Abweichungen sollten mit allen Beteiligten besprochen sein. Das Template gibt keine Garantie für Korrektheit und/oder Funktionalität. \textcolor{red}{Jeder Benutzer ist selbst für sein Dokument verantwortlich und hat es (unabhängig vom Template) so einzureichen, wie es abgesprochen und/oder erwartet wird.} 
+%
+%\section{Struktur und Überschriften}
+%\label{kap:struktur}
+%    Die Kapitel sind so zu strukturieren, dass die mit dem Inhalt der Arbeit stimmig sind. Weiterhin sollte jedes Kapitel mit einem \verb|\label{}| versehen sein, damit darauf innerhalb der Arbeit  (per \verb|\ref{}|) referenziert werden kann.
+%    
+%    Aus technischen Gründen ist für ein Kapitel der Befehl \verb|\section{}| (als oberste Struktur\-einheit) zu nutzen. Auf nicht nummerierte Kapitel sollte verzichtet werden.
+%
+%\subsection{Unterüberschriften}
+%    Zur Unterteilung von Hauptunterschriften sind Unterüberschriften per \verb|\subsection{}| zu nutzen. Auch hier auf ein entsprechendes \verb|\label{}| achten.
+%    
+%    Ein Unterkapitel sollte nur dann genutzt werden, wenn nicht nur eines sondern mehrere davon innerhalb eines Hauptkapitels benutzt werden. Die relevanten Informationen stehen dabei immer nur in den ``Blättern'' der Kapitelstruktur: sollten Unterkapitel benutzt werden, ist im generischen (vorgelagerten) Hauptteil keine relevante Information vorhanden und es gibt mindestens ein weiteres Unterkapitel. Dies gilt für alle nachgelagerten, niederen Kapitelstrukturen ebenfalls.
+%
+%\subsubsection{Niedere Überschriften}
+%    Niedere Kapitelüberschriften per \verb|\subsubsection{}| folgen den Bedingungen von normalen Unterkapiteln.
+%
+%\paragraph{Paragraphen}
+%    Paragraphen (via \verb|\paragraph{}|) sind für kleinere Unterteilung innerhalb eines Textes (Absätze) gedacht. Paragraphen (und Unterparagraphen) erscheinen nicht mehr im Inhaltsverzeichnis.
+%
+%\subparagraph{Unterparagraphen}
+%    Sollte es notwendig sein, können Paragraphen weiter unterteilt werden. Dazu ist \verb|\subparagraph{}| zu nutzen. Generell sollte von einer Unterteilung von Paragraphen in Unterparagraphen abgesehen werden.
+%
+%
+%\section{Umgebungen}
+%\label{kap:umgebungen}
+%
+%\subsection{Bilder}
+%    Bilder werden per \verb|\begin{figure}|-Umgebung eingebunden. Die Abbildung \ref{fig:bild} zeigt ein entsprechendes Beispiel-Bild. Das Bild sollte normalerweise per \verb|[t]|-Parameter oben auf der Seite positioniert sein, notfalls ist aber auch unten (per \verb|[b]|) möglich. Ein \verb|\centering| sorgt für eine mittige Platzierung. Das \verb|\label{}| sollte auch hier gesetzt werden, damit man es per \verb|\ref{}| im Text referenzieren kann. Schlussendlich ergibt ein \verb|\caption[]{}| die Bildunterschrift: in eckigen Klammern kann eine Kurzvariante (für das Abbildungsverzeichnis) eingetragen sein (falls notwendig), und in geschweiften Klammen der normale Text unter dem Bild. Nummeriert wird das Bild automatisch. Weitere Infos und Links sind im Anhang~\ref{anh:links} zu finden.
+%
+%    \begin{figure}[t]
+%        \centering
+%        \includegraphics[width=11cm]{testbild.jpg}
+%        \caption[Kurze Bild-Caption]
+%                {Lange Bild-Caption, die nur im Dokument selbst (unter dem Bild) zu sehen ist}
+%        \label{fig:bild}
+%    \end{figure}
+%
+%
+%\subsection{Tabellen}
+%    Tabellen sind, ähnlich wie Bilder, in einer \verb|\begin{table}|-Umgebung zu setzen. Eine Beispiel-Tabelle findet sich in Tabelle~\ref{tab:uebersicht}. Auch Tabellen sind mit \verb|[t]| vorzugsweise oben zu platzieren. Es wird die \verb|\begin{tabularx}|-Umgebung für die innere Tabellenstruktur empfohlen, da hier der Seitenplatz variabel genutzt werden kann (ein \verb|X| in der Spaltendefinition). Es werden auf vertikale Begrenzungsrahmen verzichtet, die Kopfzeile ist mit \verb|\textbf{}| zu versehen. Horizontale Linien sind in der Kopfzeile und am Ende der Tabelle zu setzen, die Zeilen an sich per vorgelagerten \verb|\grayrow| abwechselnd farbig zu markieren (Start mit grauer Zeile). Ein \verb|\caption[]{}| gehört ebenfalls dazu. Weitere Infos zu Tabellen befinden sich im Anhang~\ref{anh:links}.
+%
+%    \begin{table}[t]
+%    \begin{tabularx}{\textwidth}{l X X}
+%        \hline
+%        \textbf{Spalte 1} & \textbf{Spalte 2} & \textbf{Spalte 3} \\
+%        \hline
+%        \grayrow
+%        Inhalt            & Inhalt            & Inhalt \\
+%        Inhalt            & Inhalt            & Inhalt \\
+%        \grayrow
+%        Inhalt            & Inhalt            & Inhalt \\
+%        \hline
+%    \end{tabularx}
+%    \caption[Kurze Tabellen-Caption]{Eine Tabelle mit drei Spalten und drei Zeilen}
+%    \label{tab:uebersicht}
+%    \end{table}
+%
+%
+%\subsection{Auflistungen und Beschreibungen}
+%    Die gängigen und vordefinierten Auflistungen \verb|itemize|, \verb|enumerate| sowie \verb|description| werden empfohlen. 
+%
+%\subsection{Mathematische Formeln}
+%    Für kurze mathematische inline-Formeln kann die \verb|$...$|-Notation genutzt werden, wie zum Beispiel $E = mc^2$. Für alle Formeln, die für den Inhalt essenziell sind, referenziert werden und/oder länger ausfallen, sollte die \verb|\begin{equation}|-Umgebung genutzt werden:
+%    
+%    
+%    \begin{equation}\label{math:1}
+%        y_b = \sum_{i=0}^{n} a \times x^i - \left( \frac{a^2}{2\sqrt{b}} \right)
+%    \end{equation}
+%    \equationlist{Beispiel-Formel mit Verzeichniseintrag}
+%    
+%    Eine Referenz auf die entsprechende Formel ist dann per \verb|\ref{}| möglich, wie etwa ``siehe Gleichung~\ref{math:1}''. Dafür muss jede Formeln in einer eigenen Umgebung platziert werden. Unterhalb der Umgebung ist der Befehl \verb|\equationlist{}| zu nutzen, damit ein Eintrag im Formelverzeichnis erfolgt. Falls nicht notwendig, kann das Formelverzeichnis (\verb|\listofusedequations|) entfernt werden (nach Absprache mit dem Beteuer). Weitere Informationen finden sich unter Anhang~\ref{anh:links}.
+%
+%\subsection{Quellcode}
+%    Für Quellcode ist in den meisten Fällen eine \verb|\begin{verbatim}|-Umgebung ausreichend. Bei Quellcode, welcher erläutert wird und wesentlich zum Inhalt beiträgt, kann eine Benutzung von \verb|\begin{lstlisting}|-Umgebung in sinnvoll sein (siehe Quellcode~\ref{code1}). Die Formatierung sollte mit dem Betreuer abgesprochen sein, da hier viele Optionen möglich sind. Zeilennummern sollten immer mit eingefügt werden. Das \verb|label| und \verb|caption| sind in der Definition zu setzen. Ein \verb|float| setzt den Quellcode nach oben auf die Seite. Sowohl die \verb|listings|-Definition als auch der Quellcode kann ausgelagert werden. Nach Absprache kann das Quellcodeverzeichnis (\verb|\lstlistoflistings|) entfernt werden. Weitere Infos befinden sind im Anhang~\ref{anh:links}.
+%    
+%    \begin{lstlisting}[
+%        language=C++,
+%        label={code1},
+%        caption={[Kurze Code-Caption zu C++] Beispielfunktion in \texttt{HelloWorld.cpp} mit einer langen Caption},
+%        float,
+%    ]
+%#include <iostream>
+%using namespace std;
+%int main(){
+%    cout << "Hello, World!";
+%    return 0;
+%}
+%    \end{lstlisting}
+%
+%
+%\section{Referenzen und Zitate}
+%
+%\subsection{Wissenschaftliche Quellen}
+%Grundsätzlich sind alle (Gedanken-)Ansätze, Methoden, Aussagen und Ergebnisse, die nicht vom Studierenden selbst stammen, mit Quellen zu belegen. Die Professur empfiehlt unbedingt die Nutzung eines Literaturverwaltungsprogramms (bspw. \href{https://www.zotero.org/}{Zotero}, \href{https://www.mendeley.com}{Mendeley}, \href{https://www.citavi.com/de}{Citavi}). Dies reduziert erheblich den Arbeitsaufwand beim wissenschaftlichen Zitieren und bei der Erstellung des Literaturverzeichnisses.
+%
+%Wikipedia und sonstige Online-Enzyklopädien sind keine wissenschaftliche Quellen! Jedoch kann Wikipedia etc. für die Suche nach weiterführende Literatur hilfreich sein. Nur in Absprache mit dem Betreuer darf Wikipedia (zB. für einfache Begriffserklärungen) benutzt werden. 
+%
+%\subsection{Zitier-Stil und Vorgaben}
+%    Im Fließtext erfolgt die Referenzierung durch Nutzung des Zitierstils der (kursiv) American Psychological Association, kurz \textit{APA}. Die entsprechenden Definitionen sind bereits im Dokument eingepflegt. Zum Zitieren einer Quelle wird die \verb|natbib|-Bibliothek benutzt, welche viele verschiedene Möglichkeiten der Nennung anbietet. Wie entsprechende Literatur korrekt in diesem Stil zitiert wird, kann folgender Seite entnommen werden:
+%    \begin{center}
+%        \href{https://irsc.libguides.com/apa/referenceexamples}{\texttt{https://irsc.libguides.com/apa/referenceexamples}}
+%    \end{center}
+%    Im Anhang~\ref{anh:links} befinden sich weitere Informationen zu verschiedenen Styles und die entsprechenden \verb|natbib|-Befehle. Die am häufigsten im Text genutzten Zitierweisen sind folgende:
+%    \begin{itemize}
+%        \item erstmalige Nennung mit allen Autoren \verb|\citep|*\verb|{}|: \citep*{book}
+%        \item simple Nennung \verb|\citep{}|: \citep{book}
+%        \item mit Prefix und Suffix \verb|\citep[][]{}|: \citep[siehe][S.~740\,ff.]{proc}
+%        \item mehrere Angaben \verb|\citep{ , }|: \citep{article,book}
+%        \item aktive Nennung \verb|\citet{}|: ``wie von \citet{proc2} aufgezeigt''
+%    \end{itemize}
+%    
+%    \textit{Bitte fügen Sie immer die Seitenzahl als Suffix an jede Quelle hinzu, wenn Sie auf eine bestimmte Stelle im Dokument verweisen!} Damit die Referenzierung der Literatur ordentlich funktioniert, muss eine \verb|.bib|-Datei mit den Quellen im Projekt existieren und eingebunden werden (in diesem Template heißt diese \verb|library.bib|). Nach Möglichkeit ist die referenzierte Literatur komplett mit allen Metadaten einzutragen. Es kann hierbei eine Literaturverwaltung benutzt werden, welche automatisch die benötige \verb|.bib|-Datei erzeugt.
+%    
+%
+%\subsection{Fußnoten, Links, Websites}
+%    Die Benutzung von \textbf{Fußnoten} sollte vermieden werden. Ansonsten sind Fußnoten nur zur weiteren Erklärung da, welche den Lesefluss stören würden, aber niemals für Literaturangaben. Davon ausgenommen sind Verweise auf Websiten\footnote{Wie zum Beispiel Verweise auf News-Websites, Code-Repositories oder ähnliche, nicht als Quellen benutzte URLs.}. Dazu muss der Befehl \verb|\footnote{}| benutzt\footnote{Die Nummerierung geschieht hierbei automatisch.} werden.
+%
+%    Für \textbf{Dokument-interne Referenzen} wird der Befehl \verb|\ref{}| benutzt. Generell sollten Vorwärts\-referenzen eher selten benutzt werden, besser sind Rückwärts\-referenzen im Dokument.
+%
+%    Für \textbf{Weblinks} steht der Befehl \verb|\href{}{}| zur Verfügung (vorn der Link, hinten der Text). Web-Referenzen sollten im Allgemeinen nicht im Text sondern als Fußnote oder Quelle genutzt werden.
+%
+%
+%
+%
+
+%   Ende des Hauptteils
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apacite}
+\bibliography{library}
+\begin{closing}
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Beginn des Anhangs
+
+
+%   Ende des Anhangs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\declaration
+\end{closing}
+\end{document}
